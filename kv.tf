@@ -3,8 +3,7 @@ resource "vault_mount" "app" {
   type = "generic"
 }
 
-git a
-resource "vault_generic_secret" "example" {
+resource "vault_generic_secret" "docker" {
   path = "${vault_mount.app.path}/pipeline/docker"
 
   data_json = <<EOT
